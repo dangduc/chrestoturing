@@ -1,0 +1,27 @@
+#+TAGS: racket functional
+
+* map function in racket
+
+From Official Racket Documentation:
+#+BEGIN_SRC racket
+> (map (lambda (number)
+         (+ 1 number))
+       '(1 2 3 4))
+'(2 3 4 5)
+#+END_SRC
+[[https://docs.racket-lang.org/reference/pairs.html#%28def._%28%28lib._racket%2Fprivate%2Fmap..rkt%29._map%29%29][List iteration]]
+
+From Rosetta Code:
+#+BEGIN_SRC racket
+#lang racket
+
+;; using the `for/vector' comprehension form
+(for/vector ([i #(1 2 3 4 5)]) (sqr i))
+
+;; the usual functional `map'
+(vector-map sqr #(1 2 3 4 5))
+#+END_SRC
+[[https://rosettacode.org/wiki/Apply_a_callback_to_an_array][Apply a callback to an array]]
+
+* Links
+- [[file:202206-BD8666A2-FEA9-4058-9D7F-3AECF604AAE0-map-function-in-elisp.org][elisp]]

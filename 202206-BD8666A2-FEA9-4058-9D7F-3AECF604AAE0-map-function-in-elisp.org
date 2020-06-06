@@ -1,0 +1,10 @@
+#+TAGS: elisp functional
+
+* map function in elisp
+#+BEGIN_SRC elisp
+(mapcar (lambda (elt) (+ elt 1)) (list 1 2 3 4))
+;; outputs (2 3 4 5)
+#+END_SRC
+
+* Links
+- [[file:202206-BF23FDE8-E0ED-4789-9FCC-9DC70F998C40-map-function-in-racket.org][racket]]
