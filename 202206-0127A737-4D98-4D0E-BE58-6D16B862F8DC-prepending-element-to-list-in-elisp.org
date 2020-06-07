@@ -1,0 +1,15 @@
+#+TAGS: elisp
+
+* prepending element to list in elisp
+
+#+BEGIN_SRC elisp
+(cons 1 '(2))
+     ⇒ (1 2)
+(cons 1 '())
+     ⇒ (1)
+(cons 1 2)
+     ⇒ (1 . 2)
+#+END_SRC
+[[https://www.gnu.org/software/emacs/manual/html_node/elisp/Building-Lists.html][5.4 Building Cons Cells and Lists]]
+
+* Links

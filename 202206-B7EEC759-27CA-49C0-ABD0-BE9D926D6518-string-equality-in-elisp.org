@@ -1,0 +1,15 @@
+#+TAGS: elisp comparison
+
+* string equality in elisp
+
+#+BEGIN_SRC elisp
+(string= "abc" "abc")
+     ⇒ t
+(string= "abc" "ABC")
+     ⇒ nil
+(string= "ab" "ABC")
+     ⇒ nil
+#+END_SRC
+[[https://www.gnu.org/software/emacs/manual/html_node/elisp/Text-Comparison.html][4.5 Comparison of Characters and Strings]]
+
+* Links
