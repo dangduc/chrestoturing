@@ -1,0 +1,12 @@
+#+TAGS: racket functional
+
+* filter function in racket
+
+#+BEGIN_SRC racket
+> (filter positive? '(1 -2 3 4 -5))
+'(1 3 4)
+#+END_SRC
+[[https://docs.racket-lang.org/reference/pairs.html#%28def._%28%28lib._racket%2Fprivate%2Flist..rkt%29._filter%29%29][List Filter: Racket Documentation]]
+
+* Links
+- [[file:202206-CF3A67B8-C4DD-4DD3-9802-6D559A249B30-filter-function-in-elisp.org][elisp]]

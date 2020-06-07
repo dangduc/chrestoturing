@@ -1,0 +1,11 @@
+#+TAGS: elisp functional
+
+* filter function in elisp
+
+#+BEGIN_SRC elisp
+(seq-filter (lambda (elt) (> elt 2)) (list 1 2 3 4))
+; (3 4)
+#+END_SRC
+
+* Links
+- [[file:202206-4245CA5C-E66B-42D4-9EB1-305B2680DBE1-filter-function-in-racket.org][racket]]
