@@ -1,0 +1,13 @@
+#+TAGS: elisp one-thing-to-another
+
+* Calling functions on temporary buffers from filepath in elisp
+
+Some elisp functions require the user to be active in some buffer. However, sometimes the user isn't open to buffer nor wants to open a buffer. Or maybe the user wants to execute a function to hundreds of buffers. The following is an approach to apply a function to a temporary buffer given a filepath.
+
+filepath -> buffer-context functions.
+
+#+BEGIN_SRC elisp
+(with-temp-buffer (insert-file-contents "~/dev/notes/log.org")
+                  (org-element-parse-buffer))
+#+END_SRC
+* Links
