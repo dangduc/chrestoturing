@@ -1,0 +1,15 @@
+#+TAGS: elisp conditionals
+
+* Switch statement in elisp
+
+#+BEGIN_SRC elisp
+(let ((x 42))
+  (cond ((numberp x) "number")
+        ((stringp x) "string")
+        (t "default")))
+#+END_SRC
+
+#+RESULTS:
+: number
+
+* Links
