@@ -1,0 +1,30 @@
+#+TAGS: foreach elisp
+
+* foreach in elisp
+
+Using emacs builtin ~dolist~:
+#+BEGIN_SRC elisp
+(let ((total 0))
+  (dolist (x '(1 2 3 4))
+    (setq total (+ total x)))
+  total)
+#+END_SRC
+
+#+RESULTS:
+: 10
+
+Using emacs builtin ~mapc~
+#+BEGIN_SRC elisp
+(let ((total 0))
+  (mapc (lambda (x)
+          (setq total (+ total x)))
+        '(1 2 3 4))
+  total)
+#+END_SRC
+
+#+RESULTS:
+: 10
+
+*Foreach*'s are characterized by iterating over a list and side-effecting _rather_ than accumulating the result (e.g. functional ~apply~) or returning a modified list (e.g. functional ~map~)
+
+* Links
