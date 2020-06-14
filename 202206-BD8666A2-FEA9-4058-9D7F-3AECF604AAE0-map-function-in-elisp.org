@@ -6,5 +6,7 @@
 ;; outputs (2 3 4 5)
 #+END_SRC
 
+Functional *map* is characterized by iterating over a list and returning a modified list where the number and order of elements matches the returned list, rather than side-effecting (e.g. foreach) or accumulating a result (functional ~apply~).
+
 * Links
 - [[file:202206-BF23FDE8-E0ED-4789-9FCC-9DC70F998C40-map-function-in-racket.org][racket]]
