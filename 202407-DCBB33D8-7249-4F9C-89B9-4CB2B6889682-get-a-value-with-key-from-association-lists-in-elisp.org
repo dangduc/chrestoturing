@@ -1,0 +1,16 @@
+#+TAGS: elisp data-structures
+
+* Get a value with key from association lists (alist) in elisp
+
+Similar to map data structures in other languages.
+
+#+BEGIN_SRC elisp
+(assoc 'masterball '((pokeball . 0.15) (ultraball . .50) (masterball . 1.0)))
+#+END_SRC
+
+#+RESULTS:
+: (masterball . 1.0)
+
+[[https://www.gnu.org/software/emacs/manual/html_node/elisp/Association-Lists.html]]
+
+* Links
