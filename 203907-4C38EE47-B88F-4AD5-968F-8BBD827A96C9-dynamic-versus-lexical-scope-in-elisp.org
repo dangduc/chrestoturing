@@ -1,0 +1,22 @@
+#+TAGS: scope elisp
+
+* Dynamic versus lexical scope in elisp
+#+begin_src elisp
+(eval
+ '(let ((a 1))                          ; binding (1) lexical.
+   (let ((f (lambda () (print a))))
+     (let ((a 2))                       ; binding (2) dynamic.
+       (funcall f))))
+ t)                                     ; t enables lexical scoping.
+#+end_src
+
+Scoping has to do with how /variables/ are looked up by their names.
+
+A /binding/ is a one-way association from a name to its value.
+
+*Dynamic scope* uses a global table, while *lexical scope* uses tables corresponding to a closure created by each binding scope (defun, lambda, function special form, #' syntax, let syntax, …) organized in one hierarchy called /the environment/.
+
+* See
+- [[https://www.emacswiki.org/emacs/DynamicBindingVsLexicalBinding]]
+- [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Closures.html#Closures]]
+* Links

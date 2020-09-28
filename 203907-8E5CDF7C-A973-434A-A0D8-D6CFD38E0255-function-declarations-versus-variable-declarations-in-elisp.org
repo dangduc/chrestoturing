@@ -1,0 +1,31 @@
+#+TAGS: elisp
+
+* Function declarations versus variable declarations in elisp
+
+elisp is a lisp-2 which means function and variable names are manged in separate tables.
+
+A consequence is that there is no name collision when declaring a function and variable with the same name.
+
+#+begin_src elisp
+(defun some-name () nil "the function")
+(defvar some-name "the variable")
+(some-name) ; "the function"
+some-name   ; "the variable"
+#+end_src
+
+However, elisp needs help when calling functions that are bound to variables.
+#+begin_src elisp
+(defvar some-function (lambda () "the function"))
+(some-function)         ; eval: Symbol’s function definition is void: some-function
+(funcall some-function) ; "the function"
+#+end_src
+
+elisp also needs help when referencing names bound to functions.
+#+begin_src elisp
+(defun other-function () nil "the function")
+(funcall other-function)   ; eval: Symbol’s value as variable is void: other-function
+(funcall #'other-function) ; "the function"
+#+end_src
+
+* Links
+- [[file:203907-4C38EE47-B88F-4AD5-968F-8BBD827A96C9-dynamic-versus-lexical-scope-in-elisp.org][Dynamic v. Lexical Scope]]
